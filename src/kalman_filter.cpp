@@ -47,6 +47,7 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   float phi;
   float rhoDot;
 
+  // check division by 0, convert cartesian to polar
   if (fabs(x_(0)) <= 0.001) {
     rho = 0.001;
     phi = atan2(x_(1), 0.001);
