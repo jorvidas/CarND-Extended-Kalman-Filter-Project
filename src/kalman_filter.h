@@ -3,8 +3,7 @@
 #include "Eigen/Dense"
 
 class KalmanFilter {
-public:
-
+ public:
   // state vector
   Eigen::VectorXd x_;
 
@@ -22,8 +21,6 @@ public:
 
   // measurement covariance matrix
   Eigen::MatrixXd R_;
-
-
 
   /**
    * Constructor
@@ -65,8 +62,6 @@ public:
    * @param z The measurement at k+1
    */
   void UpdateEKF(const Eigen::VectorXd &z);
-
-
 };
 
 #endif /* KALMAN_FILTER_H_ */
